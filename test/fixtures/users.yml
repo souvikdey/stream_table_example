@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  fname: MyString
+  lname: MyString
+  salary: 9.99
+
+two:
+  email: MyString
+  fname: MyString
+  lname: MyString
+  salary: 9.99
