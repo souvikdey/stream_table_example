@@ -9,6 +9,7 @@
       <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:fname) %></th>
       <th><%= model_class.human_attribute_name(:lname) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
       <th><%= model_class.human_attribute_name(:salary) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -21,8 +22,9 @@
         <td><%= user.email %></td>
         <td><%= user.fname %></td>
         <td><%= user.lname %></td>
-        <td><%= user.salary %></td>
-        <td><%=l user.created_at %></td>
+        <td><%= user.city %></td>
+        <td><%= number_to_currency(user.salary) %></td>
+        <td><%= user.created_at.strftime("%m/%d/%Y at %I:%M %p") %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-mini' %>
